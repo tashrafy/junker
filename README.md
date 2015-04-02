@@ -1,6 +1,6 @@
 #  [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-> A library for generating fake data such as names, addresses, and phone numbers. 
+> A library for generating fake data such as names, addresses, and phone numbers.  NodeJS port of [faker](https://github.com/stympy/faker).
 
 
 ## Install
