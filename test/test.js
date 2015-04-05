@@ -1,16 +1,16 @@
 'use strict';
 
-var junker = require('../lib/junker')
+var Junker = require('../lib/junker')
   , fs     = require('fs')
   , yaml   = require('js-yaml')
   , assert = require('assert');
 
 describe('junker node module', function () {
-  var initLib;
-  initLib = new junker();
+  var junker;
+  junker = new Junker();
 
   it('must initialize junker', function () {
-    assert.equal('object', typeof initLib);
+    assert.equal('object', typeof junker);
   });
 
   it('must load a yaml file', function(){
@@ -21,9 +21,25 @@ describe('junker node module', function () {
   });
 
   it('must return a name obj', function(){
-    var name = initLib.name();
-    assert.notEqual(null, name, 'name is NULL');
-    assert.notEqual(undefined, name, 'name is undefined');
+    var nameObj = junker.Name()
+      , name = nameObj.name;
+
+    assert.equal('object', typeof nameObj, 'junker.Name() should return an obj');
+    assert.equal('string', typeof name, 'name should be a string');
+    assert.notStrictEqual(null, name, 'name is NULL');
+    assert.notStrictEqual(undefined, name, 'name is undefined');
+  });
+
+  it('must return a number obj', function(){
+    var numObj = junker.Number;
+      // , num = numObj.number(1);
+      console.log(numObj.number(10));
+      console.log(numObj.decimal(4, 5));
+      // console.log(num);
+    // assert.equal('object', typeof nameObj, 'junker.Name() should return an obj');
+    // assert.equal('string', typeof name, 'name should be a string');
+    // assert.notStrictEqual(null, name, 'name is NULL');
+    // assert.notStrictEqual(undefined, name, 'name is undefined');
   });
 });
 
