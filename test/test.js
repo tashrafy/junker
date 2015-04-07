@@ -24,6 +24,7 @@ describe('junker node module', function () {
     var nameObj = junker.Name()
       , name = nameObj.name;
 
+    console.log('junker.Name().name\n', nameObj);
     assert.equal('object', typeof nameObj, 'junker.Name() should return an obj');
     assert.equal('string', typeof name, 'name should be a string');
     assert.notStrictEqual(null, name, 'name is NULL');
@@ -31,13 +32,11 @@ describe('junker node module', function () {
   });
 
   it('must return a number obj', function(){
-    var numObj = junker.Number;
-      // , num = numObj.number(1);
-      console.log(numObj.number(10));
-      console.log(numObj.decimal(4, 5));
-      // console.log(num);
-    // assert.equal('object', typeof nameObj, 'junker.Name() should return an obj');
-    // assert.equal('string', typeof name, 'name should be a string');
+    var number = junker.Number;
+
+      // console.log(number.decimal(4, 5));
+    assert.equal('object', typeof number, 'junker.Number should return an object');
+    assert.equal(0, number.number(0), 'number(0) should return random number of digits');
     // assert.notStrictEqual(null, name, 'name is NULL');
     // assert.notStrictEqual(undefined, name, 'name is undefined');
   });
