@@ -76,7 +76,7 @@ describe('junker node module', function () {
   it('must return a decimal', function(){
     console.log('Junker.Number.decimal() TEST:\n');
 
-    var zeroCase, nanCase, emptyCase, strCase, wordCase, decimal;
+    var zeroCase, nanCase, emptyCase, strCase, wordCase, negCase, decimal;
     decimal = number.decimal(4, 5);
     console.log('number.decimal(4, 5)', decimal);
     assert.equal(false, decimal % 1 === 0, 'decimal(4, 5) should return a decimal');
@@ -96,14 +96,46 @@ describe('junker node module', function () {
     assert.equal(true, emptyCase % 1 !== 0, 'number.decimal() should return a random decimal');
 
     strCase = number.decimal('12.23', '32.23');
-    console.log('number.decimal("12.23")', strCase);
+    console.log('number.decimal("12.23", "32.23")', strCase);
     assert.equal(true, strCase % 1 !== 0, 'number.decimal("12.23") should return a random decimal');
 
-
+    negCase = number.decimal('-12.23', '32.15');
+    console.log('number.decimal("-12.23", "32.15")', negCase);
+    assert.equal(true, negCase % 1 !== 0, 'number.decimal("12.23") should return a random decimal');
 
     console.log('----------\n');
   });
 
+  it('must return a hexadecimal', function(){
+    console.log('Junker.Number.hexdecimal() TEST:\n');
+
+    var zeroCase, nanCase, emptyCase, strCase, wordCase, negCase, hexdecimal;
+    hexdecimal = number.hexadecimal();
+    console.log('number.hexadecimal()', hexdecimal);
+    // assert.equal(false, decimal % 1 === 0, 'decimal(4, 5) should return a decimal');
+
+    // zeroCase = number.decimal(0);
+    // console.log('number.decimal(0)', zeroCase);
+    // assert.equal(true, zeroCase % 1 !== 0, 'number.decimal(0) should return a random decimal');
+
+    // nanCase = number.decimal(NaN, NaN);
+    // console.log('number.decimal(NaN, NaN)', nanCase);
+    // assert.equal(true, nanCase % 1 !== 0, 'number.decimal(NaN, NaN) should return a random decimal');
+
+    // emptyCase = number.decimal();
+    // console.log('number.decimal()', emptyCase);
+    // assert.equal(true, emptyCase % 1 !== 0, 'number.decimal() should return a random decimal');
+
+    // strCase = number.decimal('12.23', '32.23');
+    // console.log('number.decimal("12.23", "32.23")', strCase);
+    // assert.equal(true, strCase % 1 !== 0, 'number.decimal("12.23") should return a random decimal');
+
+    // negCase = number.decimal('-12.23', '32.15');
+    // console.log('number.decimal("-12.23", "32.15")', negCase);
+    // assert.equal(true, negCase % 1 !== 0, 'number.decimal("12.23") should return a random decimal');
+
+    console.log('----------\n');
+  });
 
 });
 
