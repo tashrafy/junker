@@ -202,7 +202,7 @@ describe('junker node module', function () {
 
     negCase = number.positive('-12.23', '32.15');
     console.log('number.positive("-12.23", "32.15")', negCase);
-    assert.equal(true, negCase > -12.23 && negCase < 32.15, 'positive("-12.23", "32.23") should return a number positive -12.23 and 32.15');
+    assert.equal(true, negCase >= -12.23 && negCase < 32.15, 'positive("-12.23", "32.23") should return a number positive -12.23 and 32.15');
 
     var testCase = number.positive(0, 1);
     console.log('number.positive(0, 1)', testCase);
@@ -254,6 +254,14 @@ describe('junker node module', function () {
     console.log('----------\n');
   });
 
+  it('should return an address', function(){
+    console.log('Junker.Address() TEST:\n');
+
+    var address = junker.Address();
+    console.log(address);
+    // console.log(junker.Name().name);
+    console.log('----------\n');
+  });
 });
 
 
