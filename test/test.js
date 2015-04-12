@@ -159,11 +159,11 @@ describe('junker node module', function () {
 
     strCase = number.between('12.23', '32.23');
     console.log('number.between("12.23", "32.23")', strCase);
-    assert.equal(true, strCase > 12.23 && strCase < 32.23, 'between("12.23", "32.23") should return a number between 12.23 and 32.23');
+    assert.equal(true, strCase >= 12.23 && strCase <= 32.23, 'between("12.23", "32.23") should return a number between 12.23 and 32.23');
 
     negCase = number.between('-12.23', '32.15');
     console.log('number.between("-12.23", "32.15")', negCase);
-    assert.equal(true, negCase > -12.23 && negCase < 32.15, 'between("-12.23", "32.23") should return a number between -12.23 and 32.15');
+    assert.equal(true, negCase >= -12.23 && negCase < 32.15, 'between("-12.23", "32.23") should return a number between -12.23 and 32.15');
 
     var testCase = number.between(0, 1);
     console.log('number.between(0, 1)', testCase);
@@ -258,8 +258,9 @@ describe('junker node module', function () {
     console.log('Junker.Address() TEST:\n');
 
     var address = junker.Address();
-    console.log(address);
-    // console.log(junker.Name().name);
+    console.log('address', address);
+    assert.equal('object', typeof address, 'address should be an object of generated fields');
+
     console.log('----------\n');
   });
 });
