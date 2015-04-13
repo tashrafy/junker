@@ -263,6 +263,16 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return a business obj with credit card info', function(){
+    console.log('Junker.Business() TEST:\n');
+
+    var business = junker.Business();
+    console.log('business', business);
+    assert.equal('object', typeof business, 'business should be an object of generated fields');
+
+    console.log('----------\n');
+  });
 });
 
 
