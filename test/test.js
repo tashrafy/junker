@@ -273,6 +273,16 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return a team obj with details for a team', function(){
+    console.log('Junker.Team() TEST:\n');
+
+    var team = junker.Team();
+    console.log('team', team);
+    assert.equal('object', typeof team, 'team should be an object of generated fields');
+
+    console.log('----------\n');
+  });
 });
 
 
