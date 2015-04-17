@@ -293,6 +293,16 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return an app obj with details for application', function(){
+    console.log('Junker.App() TEST:\n');
+
+    var app = junker.App();
+    console.log('app', app);
+    assert.equal('object', typeof app, 'app should be an object of generated fields');
+
+    console.log('----------\n');
+  });
 });
 
 
