@@ -289,7 +289,6 @@ describe('junker node module', function () {
 
     var commerce = junker.Commerce();
     console.log('commerce', commerce);
-    console.log('dept', commerce.department(5, true));
     assert.equal('object', typeof commerce, 'commerce should be an object of generated fields');
 
     console.log('----------\n');
