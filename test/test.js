@@ -303,6 +303,20 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return an avatar obj with example picture', function(){
+    console.log('Junker.Avatar() TEST:\n');
+
+    var avatar = junker.Avatar;
+    console.log('avatar', avatar);
+    assert.equal('object', typeof avatar, 'avatar should be an object of generated fields');
+
+    var strCase = avatar.image('asd', 'asd');
+    console.log('avatar', strCase);
+    assert.equal('string', typeof strCase, 'strCase should return an image url');
+
+    console.log('----------\n');
+  });
 });
 
 
