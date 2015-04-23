@@ -317,6 +317,16 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return a company obj with fields related to a company', function(){
+    console.log('Junker.Company() TEST:\n');
+
+    var company = junker.Company();
+    console.log('company', company);
+    assert.equal('object', typeof company, 'company should be an object of generated fields');
+
+    console.log('----------\n');
+  });
 });
 
 
