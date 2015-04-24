@@ -337,6 +337,16 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return a phone number obj with generated phone numbers', function(){
+    console.log('Junker.PhoneNumber() TEST:\n');
+
+    var phone_num = junker.PhoneNumber();
+    console.log('phone_num', phone_num);
+    assert.equal('object', typeof phone_num, 'phone_num should be an object of generated fields');
+
+    console.log('----------\n');
+  });
 });
 
 
