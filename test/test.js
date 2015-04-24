@@ -327,6 +327,16 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return a hacker obj with fields related to things a hacker says', function(){
+    console.log('Junker.Hacker() TEST:\n');
+
+    var hacker = junker.Hacker();
+    console.log('hacker', hacker);
+    assert.equal('object', typeof hacker, 'hacker should be an object of generated fields');
+
+    console.log('----------\n');
+  });
 });
 
 
