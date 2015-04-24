@@ -347,6 +347,16 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return a bitcoin obj with generated hash', function(){
+    console.log('Junker.Bitcoin() TEST:\n');
+
+    var btc = junker.Bitcoin();
+    console.log('btc', btc);
+    assert.equal('object', typeof btc, 'btc should be an object of generated fields');
+
+    console.log('----------\n');
+  });
 });
 
 
