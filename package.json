@@ -9,6 +9,9 @@
   "repository": "tashrafy/junker",
   "license": "MIT",
   "files": [
+    "lib",
+    "test",
+    "Gruntfile.js",
     "index.js",
     "cli.js"
   ],
