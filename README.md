@@ -6,23 +6,40 @@
 ## Install
 
 ```sh
-$ npm install --save junker
+$ npm install junker --save
 ```
 
 
 ## Usage
 
 ```js
-var junker = require('junker');
+var junker = new require('junker');
 
-junker('Rainbow');
+junker.Name();
+
+/**
+ * Output
+ *  {
+ *    first_name: 'Delmer',
+ *    last_name: 'Abbott',
+ *    prefix: 'Dr.',
+ *    suffix: 'IV',
+ *    name: 'Ransom Windler',
+ *    title: 'Forward Paradigm Supervisor' 
+ *  }
+ */
 ```
 
-```sh
-$ npm install --global junker
-$ junker --help
+###junker.Name()
+--------------
+```js
+junker.Name().name #=> "Tyshawn Johns Sr."
+junker.Name().first_name #=> "Kaci"
+junker.Name().last_name #=> "Ernser"
+junker.Name().prefix #=> "Mr."
+junker.Name().suffix #=> "IV"
+junker.Name().title #=> "Legacy Creative Director"
 ```
-
 
 ## License
 
