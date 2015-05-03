@@ -27,7 +27,7 @@
     "data"
   ],
   "dependencies": {
-    "big-integer": "^1.4.4",
+    "bitcoinjs-lib": "^1.5.6",
     "js-yaml": "^3.3.0",
     "meow": "^3.1.0"
   },
