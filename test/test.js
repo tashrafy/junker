@@ -357,6 +357,16 @@ describe('junker node module', function () {
 
     console.log('----------\n');
   });
+
+  it('should return a code obj with generated fields', function(){
+    console.log('Junker.Code TEST:\n');
+
+    var code = junker.Code();
+    console.log('code', code.isbn());
+    // assert.equal('object', typeof code, 'code should be an object of generated fields');
+
+    console.log('----------\n');
+  });
 });
 
 
