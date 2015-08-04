@@ -362,9 +362,23 @@ describe('junker node module', function () {
     console.log('Junker.Code TEST:\n');
 
     var code = junker.Code();
-    console.log('code', code.isbn());
+    console.log('code isbn: ', code.isbn());
+    console.log('code isbn10: ', code.isbn(10));
+    console.log('code ean: ', code.ean());
+    console.log('code ean8: ', code.ean(8));
     // assert.equal('object', typeof code, 'code should be an object of generated fields');
 
+    console.log('----------\n');
+  });
+
+  it('should return a date obj with generated fields', function(){
+    console.log('Junker.Date TEST:\n');
+
+    var date = junker.Date();
+    console.log('date between: ', date.between(new Date().getTime() - 1116000000, new Date().getTime() + 1116000));
+    // assert.equal('object', typeof date, 'date should be an object of generated fields');
+
+    console.log('date forward: ', date.forward(40));
     console.log('----------\n');
   });
 });
